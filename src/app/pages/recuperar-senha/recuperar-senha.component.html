@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-12">
+        <form [formGroup]="formRecupera" (ngSubmit)="onSubmit()" class="m-auto w-50">
+
+            <div class="mb-4">
+                <h2>Recupere a senha</h2>
+            </div>
+            <div class="mb-4">
+                <label for="exampleInputEmail1">Endereço de email</label>
+                <input class="form-control border-0 border-bottom border-dark-subtle" type="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Seu email" formControlName="email">
+                    <div class="text-danger" *ngIf="form.email.touched && form.email.invalid">
+                        <span *ngIf="form.email.errors.required">
+                            Você precisa digitar o seu email para podermos enviar uma nova senha para você!
+                        </span>
+                        <span *ngIf="form.email.errors.email">
+                            Precisa digitar um email válido
+                        </span>
+                    </div>
+            </div>
+
+            <div class="mb-4 text-start">
+                <a class=" btn btn-light"[routerLink]="['/acessar-conta']">Já possui conta? <strong>Acesse aqui</strong></a>
+             </div>
+
+
+            <button type="submit" class="btn btn-success rounded-5 w-100" [disabled]="formRecupera.invalid">
+                <p class=" m-0 p-2">Enviar</p>
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-12">
+        <form [formGroup]="formAcesso" (ngSubmit)="onSubmit()" class="m-auto w-50">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <div class="mb-5 mt-4">
+                        <img class="w-100" src="https://cdn2.downdetector.com/static/uploads/c/300/b7279/TIM_logo_2016_1_UrMUWwz.png">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <input type="email" class="form-control border-0 border-bottom border-dark-subtle"
+                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="DDD + numero da TIM" formControlName="telefone">
+                    <div class="text-danger" *ngIf="form.telefone.touched && form.telefone.invalid">
+                        <span *ngIf="form.telefone.errors.required">
+                            Precisa colocar o telefone que você cadastrou
+                        </span>
+                        <span *ngIf="form.telefone.errors.minlength">
+                            O minimo de 8 caracteres para esse campo
+                        </span>
+                        <span *ngIf="form.telefone.errors.maxlength">
+                            O máximo de 8 caracteres para esse campo
+                        </span>
+                    </div>
+            </div>
+            <div class="mb-4">
+                <input type="password" class="form-control border-0 border-bottom border-dark-subtle"
+                    id="exampleInputPassword1" placeholder="Senha de 4 numeros" formControlName="senha">
+                    <div class="text-danger" *ngIf="form.senha.touched && form.senha.invalid">
+                        <span *ngIf="form.senha.errors.required">
+                            Precisa colocar a senha que você cadastrou
+                        </span>
+                        <span *ngIf="form.senha.errors.minlength">
+                            O minimo de 8 caracteres para esse campo
+                        </span>
+                        <span *ngIf="form.senha.errors.maxlength">
+                            O máximo de 8 caracteres para esse campo
+                        </span>
+                    </div>
+            </div>
+            <div class="row justify-content-between mb-2 mt-4">
+                <div class="mb-3 form-check col-5 ms-3">
+                    <input type="checkbox" class="form-check-input " id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Manter me conectado</label>
+                </div>
+                <div class="col-5 text-end">
+                   <a class=" w-100"[routerLink]="['/recuperar-senha']">Esqueceu a sua senha?</a>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 m-0 p-0 rounded-5"[disabled]="formAcesso.invalid">
+                <p class=" m-0 p-2">Entrar Agora</p>
+            </button>
+        </form>
+    </div>
+</div>

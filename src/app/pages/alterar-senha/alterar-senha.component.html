@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-12">
+        <form [formGroup]="formAltera" (ngSubmit)="onSubmit()" class="m-auto w-50">
+
+            <div class="mb-4">
+                <h2>Altere a senha</h2>
+            </div>
+            <div class="mb-4">
+                <label>Digite a senha atual</label>
+                <input type="password" class="form-control border-0 border-bottom border-dark-subtle"
+                    placeholder="Senha de 4 numeros" formControlName="senhaAtual">
+                <div class="text-danger" *ngIf="form.senhaAtual.touched && form.senhaAtual.invalid">
+                    <span *ngIf="form.senhaAtual.errors.required">
+                        O campo senha atual é obrigatório
+                    </span>
+                    <span *ngIf="form.senhaAtual.errors.minlength">
+                        O minímo de caracteres para esse campo são de 8
+                    </span>
+                    <span *ngIf="form.senhaAtual.errors.maxlength">
+                        O máximo de caracteres para esse campo são de 200
+                    </span>
+                </div>
+
+            </div>
+            <div class="mb-4">
+                <label>digite a nova senha</label>
+                <input type="password" class="form-control border-0 border-bottom border-dark-subtle"
+                    placeholder="Senha de 4 numeros" formControlName="novaSenha">
+                <div class="text-danger" *ngIf="form.novaSenha.touched && form.novaSenha.invalid">
+                    <span *ngIf="form.novaSenha.errors.required">
+                        O campo nova senha é obrigatório
+                    </span>
+                    <span *ngIf="form.novaSenha.errors.minlength">
+                        O minímo de caracteres para esse campo são de 8
+                    </span>
+                    <span *ngIf="form.novaSenha.errors.maxlength">
+                        O máximo de caracteres para esse campo são de 200
+                    </span>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-success rounded-5 w-100">
+                <p class=" m-0 p-2">Enviar</p>
+            </button>
+        </form>
+    </div>
+</div>
