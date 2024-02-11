@@ -5,13 +5,16 @@ import { AcessarContaComponent } from "./pages/acessar-conta/acessar-conta.compo
 import { CriarContaComponent } from "./pages/criar-conta/criar-conta.component";
 import { AlterarSenhaComponent } from "./pages/alterar-senha/alterar-senha.component";
 import { RecuperarSenhaComponent } from "./pages/recuperar-senha/recuperar-senha.component";
+import { PerfilUsuarioComponent } from "./pages/perfil-usuario/perfil-usuario.component";
 
 const routes : Routes = [
     {path:'', pathMatch:'full', redirectTo:'acessar-conta'},
     {path:'acessar-conta', component:AcessarContaComponent},
     {path:'criar-conta', component:CriarContaComponent},
     {path:'alterar-senha', component:AlterarSenhaComponent},
-    {path:'recuperar-senha',component:RecuperarSenhaComponent}
+    {path:'recuperar-senha',component:RecuperarSenhaComponent},
+    {path:'perfil-usuario',component:PerfilUsuarioComponent}
+    
 ];
 
 @NgModule({

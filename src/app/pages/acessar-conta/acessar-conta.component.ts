@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {HttpClient} from '@angular/common/http'
+import { enviroment } from '../../enviroment/app.enviroment';
 
 @Component({
   selector: 'app-acessar-conta',
@@ -8,6 +9,8 @@ import {HttpClient} from '@angular/common/http'
   styleUrls: ['./acessar-conta.component.css']
 })
 export class AcessarContaComponent {
+
+  mensagemErro: string = '';
 
   constructor(
     private httpClient : HttpClient
@@ -22,6 +25,24 @@ export class AcessarContaComponent {
     }
 
     onSubmit(): void{
+      this.mensagemErro='';
+      this.httpClient.post(enviroment.API_URL + "/api/autenticar",this.formAcesso.value, 
+      {responseType:'text'}).subscribe({
+        next :(data)=>{
+          localStorage.setItem('access-token', data);
+          this.formAcesso.reset();
+          window.location.href ="/perfil-usuario"
+
+          let telefone = this.formAcesso.value.telefone
+          if(telefone != null){
+            localStorage.setItem('telefone_usuario', telefone);
+          }
+        },
+        error:(e)=>{
+          this.mensagemErro=e.error;
+        }
+
+      })
       
     }
 

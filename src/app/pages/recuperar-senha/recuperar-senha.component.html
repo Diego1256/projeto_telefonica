@@ -1,14 +1,19 @@
 <div class="row">
-    <div class="col-12">
-        <form [formGroup]="formRecupera" (ngSubmit)="onSubmit()" class="m-auto w-50">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <div class="card shadow p-4 mt-5 bg-white rounded-4">
+            <form [formGroup]="formRecupera" (ngSubmit)="onSubmit()">
 
-            <div class="mb-4">
-                <h2>Recupere a senha</h2>
-            </div>
-            <div class="mb-4">
-                <label for="exampleInputEmail1">Endereço de email</label>
-                <input class="form-control border-0 border-bottom border-dark-subtle" type="email" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Seu email" formControlName="email">
+                <div class="mb-4 mt-2 d-flex flex-row justify-content-between">
+                    <h2>Recupere a senha</h2>
+                    <button type="button" class="btn-close mt-auto mb-auto" [routerLink]="['/acessar-conta']">
+                    </button>
+                </div>
+                <div class="mb-4">
+                    <label for="exampleInputEmail1">Endereço de email</label>
+                    <input class="form-control border-0 border-bottom border-dark-subtle" type="email"
+                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email"
+                        formControlName="email">
                     <div class="text-danger" *ngIf="form.email.touched && form.email.invalid">
                         <span *ngIf="form.email.errors.required">
                             Você precisa digitar o seu email para podermos enviar uma nova senha para você!
@@ -17,16 +22,19 @@
                             Precisa digitar um email válido
                         </span>
                     </div>
-            </div>
+                </div>
 
-            <div class="mb-4 text-start">
-                <a class=" btn btn-light"[routerLink]="['/acessar-conta']">Já possui conta? <strong>Acesse aqui</strong></a>
-             </div>
+                <div class="mb-4 text-start">
+                    <a class=" btn btn-light" [routerLink]="['/acessar-conta']">Já possui conta? <strong>Acesse
+                            aqui</strong></a>
+                </div>
 
 
-            <button type="submit" class="btn btn-success rounded-5 w-100" [disabled]="formRecupera.invalid">
-                <p class=" m-0 p-2">Enviar</p>
-            </button>
-        </form>
+                <button type="submit" class="btn btn-primary rounded-5 w-100 mt-1" [disabled]="formRecupera.invalid">
+                    <p class="m-0 p-1"><strong>Enviar</strong></p>
+                </button>
+            </form>
+        </div>
     </div>
+    <div class="col-3"></div>
 </div>

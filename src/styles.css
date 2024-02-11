@@ -2,3 +2,11 @@
 .Naveb{
     background-color: #0026D9;
 }
+
+html{
+    overflow-x: hidden;
+}
+.fundo{
+    background-color: #eef2f5;
+ 
+}
