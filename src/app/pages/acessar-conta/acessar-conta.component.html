@@ -10,8 +10,8 @@
                         <div class="row justify-content-center">
                             <div class="col-4">
                                 <div class="mb-4 mt-4">
-                                    <img class="w-100"
-                                        src="https://cdn2.downdetector.com/static/uploads/c/300/b7279/TIM_logo_2016_1_UrMUWwz.png">
+                                    <img class="w-100 "
+                                        src="https://lh3.googleusercontent.com/pw/ABLVV86C8aTOX7J02IlHeChdQaPmA8DfckMnGMAN2YanT4Q0iiiJGKmSrPCee2x8Nsf6rC8A6F7s1SH9DkvK_lUEdXzdqgQxx1W8xAqJXgS3Pd1uiRsKij-pF9WqpuFWY-OXHx8LGjIEthUk-dQNSWXhZ5ftswz54QXktl31927CpUSItxHy1hfa3SuEXc5erUqs0bVA0H4OhDQ62BMC-DvFhQs0ZuiXRWrY6rDxYPi4Ouvl1wkQ5_snp4wWO29dk3mHklb_d2QQCsm-61Sgb84ISUlT8WvQvUVhpwlJ5HavCFbRwIjricK0KwCwsm9y0-ZU3v-I-Vft2PikPMzCj09JcqkFLp_Zij6GPnu4sO9Po7E-unk84RyuDsepx6KsTQdmsUm-lOpbqSA0slJCtZqwJh2j6kevB1F6c7WwzOmdBkoqNgEmc5QbNMw2B6fOcDU93SLoD1w9Eraf3TKuNZj5QzURGMpJ1zp71q-lHV8OgeR9DEJudNBIbWX7pxA5b5eYyy8tSrfgpwu_lW1cg7zWQux7P1JYLOpjEnZmAaJtfCftUlb1Au2pluVOtEeZXm0phWAqbBpFctg0Kp_g1fb1n8cNUu5YsCs5WwTgDA0Fovsnk3qAAia9vqyPmBYhTCTXmxEx4VuM2MLCzzI137kybX9OHyw6vV0UF0wQ5DnGIZf82GAdKq6vTYK2nIg3BhUkd75IBXzbYyNjpYpsicaO_vLKZyQ4Op4NA1wCKsT7R6enSD7_-F4DyDZLDWzkQyEpmf3P902_x1cs0AbBqq2WlCGu6CLaoV7C351Sehb-R40_docyOcfaSLMPWXQOBPy6lFXJn2fj_-bJSu5uySwBslAy51XoYp4Iw-lq111FPZY0gkoS2yWD0WHhCHf_hyApE5Eb_dmG20E9RJvvRwM44npkX5ooRY-LzXGWfHRwGDvo74K92lqh1FI24rvWONw=w641-h641-s-no-gm?authuser=0">
                                 </div>
                             </div>
                         </div>
@@ -21,7 +21,7 @@
 
                         <div class="mb-4">
                             <input type="email" class="form-control border-0 border-bottom border-dark-subtle"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="DDD + numero da TIM"
+                                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="DDD + numero da HELLO"
                                 formControlName="telefone">
                             <div class="text-danger" *ngIf="form.telefone.touched && form.telefone.invalid">
                                 <span *ngIf="form.telefone.errors.required">
@@ -37,7 +37,7 @@
                         </div>
                         <div class="mb-4">
                             <input type="password" class="form-control border-0 border-bottom border-dark-subtle"
-                                id="exampleInputPassword1" placeholder="Senha de 4 numeros" formControlName="senha">
+                                id="exampleInputPassword1" placeholder="Senha de 8 numeros" formControlName="senha">
                             <div class="text-danger" *ngIf="form.senha.touched && form.senha.invalid">
                                 <span *ngIf="form.senha.errors.required">
                                     Precisa colocar a senha que você cadastrou
@@ -50,18 +50,20 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="row justify-content-between mb-2 mt-4" >
+                        <div class="row justify-content-between mb-2 mt-4">
                             <div class="mb-3 form-check col-5 p-0" style="margin-left: 2.1rem;">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1" style="font-size: 0.9rem;">Manter me conectado</label>
+                                <label class="form-check-label" for="exampleCheck1" style="font-size: 0.9rem;">Manter me
+                                    conectado</label>
                             </div>
                             <div class="col-5 text-end p-0">
-                                <a class=" w-100" [routerLink]="['/recuperar-senha']" style="font-size: 0.9rem;">Esqueceu a sua senha?</a>
+                                <a class=" w-100" [routerLink]="['/recuperar-senha']"
+                                    style="font-size: 0.9rem;">Esqueceu a sua senha?</a>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary rounded-5 w-100 mt-1"
+                        <button type="submit" class="btn btn-dark rounded-5 w-100 mt-1"
                             [disabled]="formAcesso.invalid">
-                            <p class=" m-0 p-1"><strong>Entrar Agora</strong></p>
+                            <p class=" m-0 p-1 "><strong>Entrar Agora</strong></p>
                         </button>
                     </form>
 

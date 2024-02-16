@@ -15,4 +15,6 @@ export class UserService {
     })
     return this.http.get<any>(enviroment.API_URL + '/api/busca-usuario', {headers :httpHeaders});
   }
+
+  
 }

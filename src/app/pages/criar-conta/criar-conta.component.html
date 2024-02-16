@@ -52,7 +52,7 @@
                 <div class="mb-4">
                     <label>Telefone</label>
                     <input type="tel" class="form-control border-0 border-bottom border-dark-subtle"
-                        id="exampleInputTel1" aria-describedby="telHelp" placeholder="DDD + numero da TIM"
+                        id="exampleInputTel1" aria-describedby="telHelp" placeholder="DDD + numero da HELLO"
                         formControlName="telefone">
                     <div class="text-danger" *ngIf="form.telefone.touched && form.telefone.invalid">
                         <span *ngIf="form.telefone.errors.required">
@@ -95,7 +95,7 @@
                 <div class="mb-4">
                     <label>Senha</label>
                     <input type="password" class="form-control border-0 border-bottom border-dark-subtle"
-                        placeholder="Senha de 4 numeros" formControlName="senha">
+                        placeholder="Senha de 8 numeros" formControlName="senha">
                     <div class="text-danger" *ngIf="form.senha.touched && form.senha.invalid">
                         <span *ngIf="form.senha.errors.required">
                             O campo senha é obrigatório
